@@ -1,17 +1,4 @@
 <h2><center>Merchants</center></h2><br>
-<center>
-<%= form_with url: merchants_path, method: :get, local: true do |f| %>
-  <%= f.label :search %>
-  <%= f.text_field :search %>
-  <%= f.submit 'Submit' %>
-<% end %>
-</center><br><br>
-
-<% if @search && @merchants.empty? %>
-  <h4>No Merchants matching '<%= @search %>'</h4>
-<% else %>
-  <h4>Merchants matching '<%= @search %>'</h4>
-<% end %>
 
 <div id='merchants'>
 <% @merchants.each do |merchant| %>
