@@ -1,6 +1,14 @@
 # frozen_string_literal: true
 
-class MerchantService
+class RailsEngineService
+  def self.get_item(id)
+    get_url("/api/v1/items/#{id}")
+  end
+
+  def self.get_items
+    get_url('/api/v1/items')
+  end
+
   def self.find_all_merchants(search)
     get_url("/api/v1/merchants/find_all?name=#{search}")
   end
