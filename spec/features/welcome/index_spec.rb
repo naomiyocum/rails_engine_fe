@@ -29,5 +29,9 @@ RSpec.describe 'Welcome Page', type: :feature do
 
       expect(page).to have_content('Text field must be filled in')
     end
+
+    it 'does not show Merchant search if nothing has been searched' do
+      expect(page).to_not have_content('Merchants matching')
+    end
   end
 end

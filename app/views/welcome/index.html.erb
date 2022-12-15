@@ -9,7 +9,7 @@
 
 <% if @search && @merchants.empty? %>
   <h4>No Merchants matching '<%= @search %>'</h4>
-<% else %>
+<% elsif @search %>
   <h4>Merchants matching '<%= @search %>'</h4>
 <% end %>
 
